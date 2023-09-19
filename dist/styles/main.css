@@ -634,7 +634,8 @@ li {
 
 .main__line {
   position: absolute;
-  top: -14px;
+  top: -10px;
+  height: 75%;
   left: -4px;
   animation: appearLine 1s linear;
 }
