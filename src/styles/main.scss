@@ -1,0 +1,66 @@
+// Переменные, миксины, функции
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+// CSS-файлы библиотек
+@import "vendor/libs";
+
+// Основное
+@import "base/fonts";
+@import "base/general";
+@import "base/keyframes";
+@import "base/main-block";
+@import "base/modal";
+
+// БЭМ-блоки
+@import "../blocks/modules";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("../img/background.png");
+  background-size: contain;
+  background-repeat: repeat;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+//   overflow: hidden;
+  animation: preload 1s ease-out;
+}
+
+.smoke {
+  background-image: url("../img/smoke.jpg");
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 99999;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  bottom: 0;
+  z-index: -1;
+  animation: smokey 9s linear infinite;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.active {
+  opacity: 1;
+  z-index: 999;
+  transition: all .6s ease;
+}
+
+.activeBurger {
+  opacity: 1;
+  z-index: 999;
+}

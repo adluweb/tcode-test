@@ -1,0 +1,120 @@
+.modal {
+    margin-top: 100px;
+
+    &__top {
+      margin-bottom: 92px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+  
+      &--close {
+        margin-top: 12px;
+        padding: 7px 10px;
+        background-color: $main-black;
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+      }
+  
+      &--title {
+        font-family: "Bebas Neue";
+        font-size: 114px;
+        width: 50%;
+        line-height: 114px;
+        letter-spacing: 3px;
+      }
+    }
+  
+    &__btn {
+      min-width: 33%;
+      margin-top: 3px;
+      background-color: $main-black;
+      padding: 11px;
+      color: $main-color;
+      border-radius: 4px;
+    }
+  
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 60px;
+  
+      &-item {
+        min-width: 32.5%;
+      }
+  
+      &-select {
+        margin-top: 24px;
+        min-width: 100%;
+        border: none;
+        border-bottom: 2px solid;
+        padding: 0 0 5px;
+        background: transparent;
+  
+        &:focus {
+          outline: none;
+        }
+      }
+  
+      &-title {
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+
+  .popUp {
+    position: absolute;
+    height: 107vh;
+    bottom: 0;
+    top: -32px;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -10;
+    background-color: $main-color;
+    transition: all .6s ease;
+  }
+
+@media (max-width: 700px) {
+
+  .modal {
+    margin-top: 10vw;
+
+
+    &__top--title {
+      font-size: 16vw;
+      line-height: 17vw;
+    }
+    
+    &__top {
+      margin-bottom: 10vw;
+      flex-direction: column-reverse;
+
+      &--close {
+        align-self: flex-end;
+      }
+    }
+  
+    &__block {
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      gap: 30px;
+    }
+  }
+
+  .popUp {
+    height: 100vh;
+  }
+
+}

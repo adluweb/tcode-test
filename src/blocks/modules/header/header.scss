@@ -1,0 +1,127 @@
+.nav {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 130px;
+    font-family: 'Montserrat', sans-serif;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__link {
+        @include f-s-16;
+        font-weight: 500;
+        color: $main-color;
+        text-decoration: none;
+        transition: all .3s ease;
+        
+        &:hover {
+            color: $main-red-color;
+        }
+    }
+
+    &__item {
+        @include f-s-16;
+        font-weight: 500;
+        color: $main-color;
+        
+        &-button {
+            @include f-s-16;
+            padding: 10px 15px;
+            background-color: $main-color;
+            margin-left: 10px;
+            font-weight: 600;
+            color: $main-black;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all .3s ease;
+            border: none;
+
+            &:hover {
+                background-color: $main-red-color;
+                color: $main-color;
+            }
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__burger {
+        display: none;
+        width: 12%;
+        height: 15%;
+    }
+}
+
+.mobile{
+
+    &__close {
+        margin-top: 12px;
+        padding: 7px 10px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        top: -35px;
+        right: 0;
+        left: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: $main-black;
+        z-index: 9999;
+        padding: 40px 10px;
+        opacity: 0;
+        z-index: -999;
+        transition: all .5s ease;
+    }
+
+    &__link {
+        min-width: 200px;
+        color: $main-color;
+        text-decoration: none;
+    }
+
+    &__item-button {
+        background: transparent;
+        color: $main-color;
+        border: 1px solid $main-red-color;
+        border-radius: 4px;
+        padding: 10px;
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav {
+        margin-bottom: 30vw;
+    }
+    .nav__link {
+        font-size: 1.6vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav__list {
+        display: none;
+    }
+
+    .nav__burger {
+        margin: 0 0 0 auto;
+        display: block;
+    }
+}

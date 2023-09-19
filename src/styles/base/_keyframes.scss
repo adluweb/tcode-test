@@ -1,0 +1,39 @@
+@keyframes preload {
+  0% {
+    background-position-x: 200px;
+  }
+  100% {
+    background-position-x: 2px;
+  }
+}
+
+@keyframes smokey {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    background-position-x: -3840px;
+  }
+}
+
+@keyframes appearLine {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 70%;
+  }
+}
+
+@keyframes appearText {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
